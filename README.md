@@ -12,5 +12,33 @@ Below is the poster summarizing our project and key findings:
 
 ![Project Poster](poster/Tweet_Bot_img.png)
 
+# Specification of dependencies
+Install the libraries:
+```
+pip install -r requirements.txt
+```
+
+# Training code
+Notebooks inside the /model folder.
+
+# Evaluation code
+Detector.ipynb.
+
+# Pre-trained models
+Two tuned models released in Huggingface.
+
+Tuned with 50k high quality tweets:
+https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
+
+Tuned with 100k raw tweets:
+https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
+
+# How to reproduce the results
+1. Run /model/tweets-instruct-tuning/tweet_instruct_50k.ipynb and model/tweets-instruct-tuning/tweet_instruct_100k.ipynb to reproduce two models.
+2. Run /Detector.ipynb to reproduce candidates model performance comparison.
+3. Run /model/lexical-distribution-post-processing/post_processing_human_like_selection.ipynb to reproduce post-processing pipeline.
+3. Run all notebooks inside /analysis folder to reproduce the analysis for the generated tweets.
+
+
 # Acknowledgement
 Thanks https://newscatcherapi.com/ for free news access.

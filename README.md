@@ -47,7 +47,8 @@ project_root/
 Two tuned models released in Huggingface.
 
 - Fine-Tuned with 100k Broad Filtering Tweets:
-  - https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
+  - Model: https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
+  - Data: https://huggingface.co/datasets/AlanYky/tweets_instruct_100k_1
   - This dataset includes 50,000 tweets selected through rigorous high-quality filtering. Built on top of broad filtering, the tweets have been further refined by:
     - Removing excessive emojis.
     - Excluding tweets with links or excessive symbols like hashtags.
@@ -57,7 +58,8 @@ Two tuned models released in Huggingface.
   
 - Fine-Tuned with 50k High-Quality Filtering Tweets:
 
-  - https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
+  - Model: https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
+  - Data: https://huggingface.co/datasets/AlanYky/tweets_instruct_v2
   - This dataset comprises 100,000 tweets filtered using broad criteria to maintain general relevance and clarity. The filtering steps include:
     - Removing mentions (@user).
     - Excluding tweets that are too short or too long.

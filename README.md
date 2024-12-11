@@ -19,19 +19,49 @@ pip install -r requirements.txt
 ```
 
 # Training code
-Notebooks inside the /model folder.
+[Notebooks inside the /model folder](./model).
 
 # Evaluation code
-Detector.ipynb.
+[Detector.ipynb](./Detector.ipynb).
+
+# Analysis code
+[Notebooks inside the /analysis folder](./analysis).
+
+# Project Folder Structure
+
+The project is organized into the following structure:
+
+```
+project_root/
+├── [analysis/](./analysis)           # Contains the analysis results.
+├── [data/](./data)               # Handles tweet data cleaning and preprocessing.
+├── [eval/](./eval)               # Includes the tweet generation results for each version of the model.
+├── [graphs/](./graphs)             # Stores analysis graphs for better visualization.
+├── [model/](./model)              # Contains approaches and implementations for training the tweet bot.
+├── [poster/](./poster)             # Project poster materials.
+└── [Detector.ipynb](./Detector.ipynb)      # Notebook for defining the GPT-4o Bot Detector and setting up the competition environment for Phase 1 and Phase 2.
+```
+
 
 # Pre-trained models
 Two tuned models released in Huggingface.
 
-Tuned with 50k high quality tweets:
-https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
+- Fine-Tuned with 100k Broad Filtering Tweets:
+  - https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
+  - This dataset includes 50,000 tweets selected through rigorous high-quality filtering. Built on top of broad filtering, the tweets have been further refined by:
+    - Removing excessive emojis.
+    - Excluding tweets with links or excessive symbols like hashtags.
+    - Filtering out tweets containing advertisement-related words.
+    - Excluding retweets (tweets containing 'RT').
 
-Tuned with 100k raw tweets:
-https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
+  
+- Fine-Tuned with 50k High-Quality Filtering Tweets:
+
+  - https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
+  - This dataset comprises 100,000 tweets filtered using broad criteria to maintain general relevance and clarity. The filtering steps include:
+    - Removing mentions (@user).
+    - Excluding tweets that are too short or too long.
+    - Filtering out tweets with excessive word repetition.
 
 # How to reproduce the results
 1. Run /model/tweets-instruct-tuning/tweet_instruct_50k.ipynb and model/tweets-instruct-tuning/tweet_instruct_100k.ipynb to reproduce two models.

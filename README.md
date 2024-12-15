@@ -49,22 +49,22 @@ Two tuned models released in Huggingface.
 - Fine-Tuned with 100k Broad Filtering Tweets:
   - Model: https://huggingface.co/AlanYky/phi-3.5_tweets_instruct
   - Data: https://huggingface.co/datasets/AlanYky/tweets_instruct_100k_1
-  - This dataset includes 50,000 tweets selected through rigorous high-quality filtering. Built on top of broad filtering, the tweets have been further refined by:
-    - Removing excessive emojis.
-    - Excluding tweets with links or excessive symbols like hashtags.
-    - Filtering out tweets containing advertisement-related words.
-    - Excluding retweets (tweets containing 'RT').
+  - This dataset comprises 100,000 tweets filtered using broad criteria to maintain general relevance and clarity. The filtering steps include:
+    - Removing mentions (@user).
+    - Excluding tweets that are too short or too long.
+    - Filtering out tweets with excessive word repetition.
 
   
 - Fine-Tuned with 50k High-Quality Filtering Tweets:
 
   - Model: https://huggingface.co/AlanYky/phi-3.5_tweets_instruct_50k
   - Data: https://huggingface.co/datasets/AlanYky/tweets_instruct_v2
-  - This dataset comprises 100,000 tweets filtered using broad criteria to maintain general relevance and clarity. The filtering steps include:
-    - Removing mentions (@user).
-    - Excluding tweets that are too short or too long.
-    - Filtering out tweets with excessive word repetition.
-
+  - This dataset includes 50,000 tweets selected through rigorous high-quality filtering. Built on top of broad filtering, the tweets have been further refined by:
+    - Removing excessive emojis.
+    - Excluding tweets with links or excessive symbols like hashtags.
+    - Filtering out tweets containing advertisement-related words.
+    - Excluding retweets (tweets containing 'RT').
+    
 # How to reproduce the results
 1. Run /model/tweets-instruct-tuning/tweet_instruct_50k.ipynb and model/tweets-instruct-tuning/tweet_instruct_100k.ipynb to reproduce two models.
 2. Run /Detector.ipynb to reproduce candidates model performance comparison.
